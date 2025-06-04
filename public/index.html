@@ -1,30 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Foundation Repair - everywhere</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AI Depot | AI Solutions For Your Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Foundation Repair Experts in The USA</h1>
-    <p>Protect your home. Book a free inspection today!</p>
-  </header>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <img src="assets/taid_logo.jpg" alt="The AI Depot Logo">
+                    <span>The AI Depot</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#problem">The Problem</a></li>
+                    <li><a href="#solution">The Solution</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#guarantee">Guarantee</a></li>
+                    <li><a href="#next-steps">Next Steps</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">GET STARTED</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
-  <section>
-    <a href="https://api.leadconnectorhq.com/widget/booking/8cI4JGKCWdnXsrbgr5S4" class="button">Book Now</a>
-  </section>
+    <section class="hero">
+        <div class="container">
+            <h1>The 10X Appointment Generator</h1>
+            <p class="subtitle">Stop Wasting Money on Leads That Go Nowhere</p>
+                   </div>
+    </section>
 
-  <footer>
-    <p>Brought to you by TheAIDepot © 2025 </p>
-  </footer>
-<!-- LeadConnector Chat Widget -->
+    <section id="problem" class="problem">
+        <div class="container">
+            <h2>The Traditional Lead Generation Model Is Broken</h2>
+            <p>In the competitive business landscape, small to medium businesses face unique challenges that impact growth and profitability.</p>
+            
+            <ul class="problem-list">
+                <li><i class="fas fa-times"></i> 80-90% of leads never convert</li>
+                <li><i class="fas fa-times"></i> Sales teams waste hours chasing unqualified prospects</li>
+                <li><i class="fas fa-times"></i> High no-show rates waste valuable time</li>
+                <li><i class="fas fa-times"></i> Marketing ROI is unpredictable and difficult to measure</li>
+            </ul>
 
-<script 
-  src="https://beta.leadconnectorhq.com/loader.js"  
-  data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
-  data-widget-id="683b5489272cc543b9a07810">
-</script>
+            <div class="problem-image">
+                <img src="assets/frustrated-business-owner.jpg" alt="Frustrated business owner looking at lead reports">
+            </div>
+
+            <a href="#calculator" class="cta-button secondary">CALCULATE YOUR WASTED SPEND</a>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <h2>What This Is Costing Your Business</h2>
+            
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="cost-per-lead">Average cost per lead:</label>
+                    <input type="number" id="cost-per-lead" placeholder="50" value="50">
+                </div>
+                
+                <div class="form-group">
+                    <label for="leads-per-month">Average leads per month:</label>
+                    <input type="number" id="leads-per-month" placeholder="100" value="100">
+                </div>
+                
+                <div class="form-group">
+                    <label for="conversion-rate">Average conversion rate (%):</label>
+                    <input type="number" id="conversion-rate" placeholder="10" value="10">
+                </div>
+                
+                <div class="form-group">
+                    <label for="order-value">Average order value ($):</label>
+                    <input type="number" id="order-value" placeholder="3500" value="3500">
+                </div>
+                
+                <button id="calculate-roi" class="cta-button">CALCULATE ROI</button>
+            </div>
+            
+            <div class="calculator-results">
+                <div class="result-item">
+                    <h3>Monthly lead spend:</h3>
+                    <p id="monthly-spend">$5000.00</p>
+                </div>
+                
+                <div class="result-item">
+                    <h3>Cost per customer acquisition:</h3>
+                    <p id="acquisition-cost">$500.00</p>
+                </div>
+                
+                <div class="result-item">
+                    <h3>Wasted spend per month:</h3>
+                    <p id="wasted-spend">$4500.00</p>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>Lead Conversion Rate Increase</h3>
+                    <div class="chart-visual" id="conversion-chart">
+                        <!-- Chart will be rendered by JavaScript -->
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <span class="legend-color traditional"></span>
+                            <span>Converted (Traditional)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color not-converted"></span>
+                            <span>Not Converted (Traditional)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color ai-converted"></span>
+                            <span>Additional Converted (With AI)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chart">
+                    <h3>Missed Opportunities</h3>
+                    <div class="missed-opportunities">
+                        <div class="opportunity-item">
+                            <h4>Leads Not Converted:</h4>
+                            <p id="leads-not-converted">90</p>
+                        </div>
+                        <div class="opportunity-item">
+                            <h4>Missed Revenue:</h4>
+                            <p id="missed-revenue">$315,000</p>
+                        </div>
+                        <div class="opportunity-item">
+                            <h4>Potential Revenue with AI:</h4>
+                            <p id="potential-revenue">$69,300</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="solution">
+        <div class="container">
+            <h2>Introducing The 10X Appointment Generator</h2>
+            <p>Our AI-powered system qualifies leads, books appointments, and prepares your sales team with everything they need to close more deals.</p>
+            
+            <div class="solution-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Lead Generation</h3>
+                    <p>We capture interested prospects from multiple channels</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Qualification</h3>
+                    <p>Our AI agents qualify leads against 13 specific criteria</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Calendar Booking</h3>
+                    <p>Qualified prospects are booked directly in your calendar</p>
+                </div>
+            </div>
+            
+            <div class="quote">
+                <p>"We don't sell leads. We guarantee appointments."</p>
+            </div>
+            
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>Our Proprietary 3-Step System</h2>
+            
+            <div class="steps-detailed">
+                <div class="step-detailed">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Custom AI Qualification</h3>
+                        <p>Our AI agents qualify leads against 13 specific criteria, ensuring you only talk to prospects who are ready to buy. The system handles objections, answers questions, and builds rapport in real-time.</p>
+                    </div>
+                </div>
+                
+                <div class="step-detailed">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Direct Calendar Booking</h3>
+                        <p>Only qualified prospects are booked directly in your calendar, eliminating no-shows and wasted appointments. The system confirms appointments and sends reminders to maximize show rates.</p>
+                    </div>
+                </div>
+                
+                <div class="step-detailed">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Pre-Appointment Notes</h3>
+                        <p>Your team receives detailed pre-appointment notes with prospect information, specific needs, budget, timeline, and objections already handled, giving you everything needed to close the sale.</p>
+                    </div>
+                </div>
+            </div>
+            
+       </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>AI Technology That Works While You Sleep</h2>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>24/7 Lead Engagement</h3>
+                    <p>Engages with new leads within 5 minutes, 24 hours a day, 7 days a week</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">💬</div>
+                    <h3>Real-time Objection Handling</h3>
+                    <p>Identifies and overcomes common objections during the qualification process</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Smart Qualification Algorithms</h3>
+                    <p>Uses 13-point qualification system to identify high-value prospects</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📅</div>
+                    <h3>Calendar Integration</h3>
+                    <p>Seamlessly integrates with your existing calendar systems</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time reporting on lead quality, conversion rates, and ROI</p>
+                </div>
+            </div>
+          </div>
+    </section>
+
+    <section class="roi">
+        <div class="container">
+            <h2>The Numbers Behind AI Success</h2>
+            <p>See the real financial impact of implementing The 10X Appointment Generator in your business with our interactive charts and ROI calculator.</p>
+            
+            <p>Businesses implementing The 10X Appointment Generator see revenue growth between 30-45% within the first year. This growth comes from increased lead conversion rates, higher average order values, and more efficient sales processes.</p>
+            
+   
+    <section id="case-studies" class="case-studies">
+        <div class="container">
+            <h2>Real Results From Real Businesses</h2>
+            
+            <div class="case-studies-grid">
+                <div class="case-study">
+                    <h3>Foundation & Waterproofing</h3>
+                    <p>Industry data shows foundation and waterproofing companies implementing AI-powered appointment setting see significant improvements in lead quality.</p>
+                    <div class="case-stats">
+                        <div class="stat">
+                            <h4>18</h4>
+                            <p>Appointments/Month</p>
+                        </div>
+                        <div class="stat">
+                            <h4>76%</h4>
+                            <p>Close Rate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <h3>Roofing Contractors</h3>
+                    <p>Industry research indicates roofing contractors can significantly reduce wasted marketing spend with AI qualification systems.</p>
+                    <div class="case-stats">
+                        <div class="stat">
+                            <h4>24</h4>
+                            <p>Appointments/Month</p>
+                        </div>
+                        <div class="stat">
+                            <h4>62%</h4>
+                            <p>Close Rate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <h3>Independent Professionals</h3>
+                    <p>Doctors, lawyers, insurance agents, and network marketers report higher quality consultations when using AI pre-qualification.</p>
+                    <div class="case-stats">
+                        <div class="stat">
+                            <h4>15</h4>
+                            <p>Appointments/Month</p>
+                        </div>
+                        <div class="stat">
+                            <h4>81%</h4>
+                            <p>Close Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="guarantee" class="benefits">
+        <div class="container">
+            <h2>Everything You Need For Predictable Growth</h2>
+            <p>Our comprehensive solution includes everything you need to transform your lead generation and appointment setting process.</p>
+            
+            <ul class="benefits-list">
+                <li><strong>AI Lead Qualification Agent</strong> - Custom-trained for your specific business and sales process</li>
+                <li><strong>Appointment Booking Automation</strong> - Direct integration with your calendar systems</li>
+                <li><strong>Lead Generation Campaign Management</strong> - Optimized campaigns to drive qualified traffic</li>
+                <li><strong>Weekly Performance Optimization</strong> - Continuous improvement of qualification criteria</li>
+                <li><strong>Real-time Analytics Dashboard</strong> - Track performance and ROI in real-time</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Lead Generation?</h2>
+            <p>Schedule a demo to see how The AI Depot can help your business generate more qualified appointments.</p>
+            
+            <div class="contact-form-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name*</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name*</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company-name">Company Name*</label>
+                            <input type="text" id="company-name" name="company-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company-url">Company Website</label>
+                            <input type="url" id="company-url" name="company-url">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="challenges">What challenges are you facing with lead generation?*</label>
+                        <textarea id="challenges" name="challenges" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="advertising">Do you currently advertise? If yes, where?</label>
+                        <textarea id="advertising" name="advertising" rows="2"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>How would you like to connect?*</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="connect-method" value="appointment"> Schedule an Appointment
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="connect-method" value="demo"> Request a Demo
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="connect-method" value="call"> Phone Call
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="cta-button primary">SUBMIT REQUEST</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="next-steps" class="next-steps">
+        <div class="container">
+            <h2>Next Steps</h2>
+            <div class="steps-process">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Schedule a Demo</h3>
+                    <p>Fill out the form above to schedule a personalized demo of our AI appointment generation system.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Customization Call</h3>
+                    <p>We'll discuss your specific business needs and customize the AI qualification criteria for your industry.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Implementation</h3>
+                    <p>Our team will set up and integrate the system with your existing tools and processes.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Start Generating Appointments</h3>
+                    <p>Begin receiving qualified appointments directly in your calendar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/taid_logo.jpg" alt="The AI Depot Logo">
+                    <h3>The AI Depot</h3>
+                    <p>AI Solutions For Your Business</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+18447143690">+1 844-714-3690</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contactaidepot@gmail.com">contactaidepot@gmail.com</a></p>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/@TheAIDepotChannel" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://x.com/TheAIDepot_3690" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/the-ai-depot-241109360/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@theaidepot8" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61576271914774" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 The AI Depot. All rights reserved.</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p>Website: <a href="https://theaidepot.online" target="_blank">theaidepot.online</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
